@@ -1,8 +1,5 @@
-/* Fill this in with the URL you get from the web page linked in the assignment spec. */
-let API_URL = "https://pointer-dev.cs.stanford.edu/cs193x_api/logansch";
-
 /* Uncomment this line to point requests at your local server. */
-API_URL = "/api";
+let API_URL = "/api";
 
 /* Subclass of Error for representing HTTP errors returned from the API.
    Exposes a status (the HTTP response status code) and message (a user-facing message).
