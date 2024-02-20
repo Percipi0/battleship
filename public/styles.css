@@ -1,0 +1,200 @@
+@font-face {
+  font-family: 'IronMan';
+  src: url('fonts/ironman.ttf') format('truetype');
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+body {
+  background: url(images/ocean.webp) no-repeat;
+  background-size: 100vw 100vh;
+}
+
+.intro {
+  width:25em;
+  height:fit-content;
+  background-color: #D3D3D3;
+  border: 2px solid #002F6C;
+  border-radius: 1%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  font-family: 'IronMan';
+  color:#002F6C;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#title {
+  display: table;
+  margin: 0 auto;
+  margin-top:.1em;
+  transform: translate(0em, 0em);
+  font-size: 5em;
+}
+
+#introForm {
+  display: table;
+  margin: 0 auto;
+}
+
+#die {
+  width:1.1em;
+  filter: invert(14%) sepia(55%) saturate(3281%) hue-rotate(202deg) brightness(86%) contrast(104%);
+  transition-duration: 0.2s;
+  position: absolute;
+  left: 70%;
+  top: 53%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#die:hover {
+  cursor: pointer;
+  filter: invert(66%) sepia(91%) saturate(4572%) hue-rotate(12deg) brightness(107%) contrast(102%);
+}
+
+#introForm label, input {
+  margin-top:6%;
+  margin-bottom:6%;
+  background-color:#D3D3D3;
+}
+
+#introForm input {
+  border:2px solid #002F6C;
+  font-family: 'IronMan';
+  color:#002F6C;
+  border-radius: 5%;
+}
+
+#introSubmit {
+  font-family: 'IronMan';
+  transition-duration: 0.4s;
+  margin-top: -.1em;
+  margin-bottom: 1m;
+  background-color:#D3D3D3;
+}
+
+#introSubmit:hover, #shipSetup:hover, #setShipHorizontal:hover {
+  color:#D3D3D3;
+  background-color: #002F6C;
+  cursor:pointer;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  font-family: 'IronMan';
+  color: #D3D3D3;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.playerGame, .opponentGame {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid #D3D3D3;
+  border-radius: 1%;
+  background-color: #D3D3D3;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+}
+
+.playerHeader {
+  font-family: 'IronMan';
+  color: #D3D3D3;
+  position: absolute;
+  top: 27em;
+  right: 10;
+}
+
+.playerGame {
+  margin-right: 8em;
+}
+
+.opponentGame {
+  margin-left: 5em;
+}
+
+.tileContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.tileColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.tile {
+  width:2.5em;
+  height:2.5em;
+  border:1px solid #D3D3D3;
+  display:inline-flex;
+  transition-duration: 0.3s;
+}
+
+.tile:hover {
+  cursor:pointer;
+}
+
+#shipSetup {
+  transition-duration: 0.4s;
+}
+
+#turnIndicator, #shipSetup, #hitIndicator, #shotIndicator {
+  width: 5em;
+  height:fit-content;
+  border-radius: 5%;
+  position:absolute;
+  top:5em;
+  visibility: hidden;
+  background-color: #D3D3D3;
+  border: 2px solid #002F6C;
+  color: #002F6C;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'IronMan';
+}
+
+#hitIndicator {
+  top: 11em;
+  min-height:2em;
+}
+
+#shotIndicator {
+  top: 8em;
+}
+
+#setShipHorizontal {
+  width: 6em;
+  height:fit-content;
+  border-radius: 5%;
+  position:absolute;
+  top:8em;
+  visibility: hidden;
+  background-color: #D3D3D3;
+  border: 2px solid #002F6C;
+  color: #002F6C;
+  text-align: center;
+  font-family: 'IronMan';
+  transition-duration: 0.4s;
+}

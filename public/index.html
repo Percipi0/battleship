@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Battleship!</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="js/index.js"></script>
+
+    <!-- This line provides automatic page and style reloading when files change -->
+    <script type="module" src="/lib/client/updater.js"></script>
+  </head>
+  <body>
+    <div class="intro">
+      <span id="title">BATTLESHIP</span>
+      
+      <form id="introForm">
+        <label for="name">Your Name:</label><br> 
+        <input minlength="1" maxlength="15" type="text" id="name" name="name" value="" required><img id="die" src="images/die.svg"/><br>
+        <label for="room">Room ID:</label><br>
+        <input minlength="6" maxlength="6" type="text" id="room" name="room" value=""><br><br>
+        <input id="introSubmit" type="submit" value="Submit">
+        </form>
+    </div>
+  <div class="games">
+  <div class="playerGame">
+    
+    <div class="tileContainer">
+      <div class="tileColumn">
+        <div id="p00" class="tile"></div>
+        <div id="p01" class="tile"></div>
+        <div id="p02" class="tile"></div>
+        <div id="p03" class="tile"></div>
+        <div id="p04" class="tile"></div>
+        <div id="p05" class="tile"></div>
+        <div id="p06" class="tile"></div>
+        <div id="p07" class="tile"></div>
+        <div id="p08" class="tile"></div>
+        <div id="p09" class="tile"></div>
+      </div>
+
+      <div class="tileColumn">
+        <div id="p10" class="tile"></div>
+        <div id="p11" class="tile"></div>
+        <div id="p12" class="tile"></div>
+        <div id="p13" class="tile"></div>
+        <div id="p14" class="tile"></div>
+        <div id="p15" class="tile"></div>
+        <div id="p16" class="tile"></div>
+        <div id="p17" class="tile"></div>
+        <div id="p18" class="tile"></div>
+        <div id="p19" class="tile"></div>
+      </div>
+
+      <div class="tileColumn">
+        <div id="p20" class="tile"></div>
+        <div id="p21" class="tile"></div>
+        <div id="p22" class="tile"></div>
+        <div id="p23" class="tile"></div>
+        <div id="p24" class="tile"></div>
+        <div id="p25" class="tile"></div>
+        <div id="p26" class="tile"></div>
+        <div id="p27" class="tile"></div>
+        <div id="p28" class="tile"></div>
+        <div id="p29" class="tile"></div>
+      </div>
+
+      <div class="tileColumn">
+        <div id="p30" class="tile"></div>
+        <div id="p31" class="tile"></div>
+        <div id="p32" class="tile"></div>
+        <div id="p33" class="tile"></div>
+        <div id="p34" class="tile"></div>
+        <div id="p35" class="tile"></div>
+        <div id="p36" class="tile"></div>
+        <div id="p37" class="tile"></div>
+        <div id="p38" class="tile"></div>
+        <div id="p39" class="tile"></div>
+      </div>
+
+      <div class="tileColumn">
+        <div id="p40" class="tile"></div>
+        <div id="p41" class="tile"></div>
+        <div id="p42" class="tile"></div>
+        <div id="p43" class="tile"></div>
+        <div id="p44" class="tile"></div>
+        <div id="p45" class="tile"></div>
+        <div id="p46" class="tile"></div>
+        <div id="p47" class="tile"></div>
+        <div id="p48" class="tile"></div>
+        <div id="p49" class="tile"></div>
+      </div>
+
+      <div class="tileColumn">
+        <div id="p50" class="tile"></div>
+        <div id="p51" class="tile"></div>
+        <div id="p52" class="tile"></div>
+        <div id="p53" class="tile"></div>
+        <div id="p54" class="tile"></div>
+        <div id="p55" class="tile"></div>
+        <div id="p56" class="tile"></div>
+        <div id="p57" class="tile"></div>
+        <div id="p58" class="tile"></div>
+        <div id="p59" class="tile"></div>
+      </div>
+
+      <div class="tileColumn">
+        <div id="p60" class="tile"></div>
+        <div id="p61" class="tile"></div>
+        <div id="p62" class="tile"></div>
+        <div id="p63" class="tile"></div>
+        <div id="p64" class="tile"></div>
+        <div id="p65" class="tile"></div>
+        <div id="p66" class="tile"></div>
+        <div id="p67" class="tile"></div>
+        <div id="p68" class="tile"></div>
+        <div id="p69" class="tile"></div>
+      </div>
+
+      <div class="tileColumn">
+        <div id="p70" class="tile"></div>
+        <div id="p71" class="tile"></div>
+        <div id="p72" class="tile"></div>
+        <div id="p73" class="tile"></div>
+        <div id="p74" class="tile"></div>
+        <div id="p75" class="tile"></div>
+        <div id="p76" class="tile"></div>
+        <div id="p77" class="tile"></div>
+        <div id="p78" class="tile"></div>
+        <div id="p79" class="tile"></div>
+      </div>
+
+      <div class="tileColumn">
+        <div id="p80" class="tile"></div>
+        <div id="p81" class="tile"></div>
+        <div id="p82" class="tile"></div>
+        <div id="p83" class="tile"></div>
+        <div id="p84" class="tile"></div>
+        <div id="p85" class="tile"></div>
+        <div id="p86" class="tile"></div>
+        <div id="p87" class="tile"></div>
+        <div id="p88" class="tile"></div>
+        <div id="p89" class="tile"></div>
+      </div>
+
+      <div class="tileColumn">
+        <div id="p90" class="tile"></div>
+        <div id="p91" class="tile"></div>
+        <div id="p92" class="tile"></div>
+        <div id="p93" class="tile"></div>
+        <div id="p94" class="tile"></div>
+        <div id="p95" class="tile"></div>
+        <div id="p96" class="tile"></div>
+        <div id="p97" class="tile"></div>
+        <div id="p98" class="tile"></div>
+        <div id="p99" class="tile"></div>
+      </div>
+
+
+
+  </div>
+  <div class="playerHeader" id="header1"><span>Player 1:&ensp;</span><span id="playerName"></span></div>
+</div>
+<button id="shipSetup">Finish Setup</button>
+<span id="turnIndicator"></span>
+<span id="hitIndicator"></span>
+<span id="shotIndicator"></span>
+<button id="setShipHorizontal">Place Ship Horizontally</button>
+  
+<div class="opponentGame">
+  <div class="tileContainer">
+    <div class="tileColumn">
+      <div id="o00" class="tile"></div>
+      <div id="o01" class="tile"></div>
+      <div id="o02" class="tile"></div>
+      <div id="o03" class="tile"></div>
+      <div id="o04" class="tile"></div>
+      <div id="o05" class="tile"></div>
+      <div id="o06" class="tile"></div>
+      <div id="o07" class="tile"></div>
+      <div id="o08" class="tile"></div>
+      <div id="o09" class="tile"></div>
+    </div>
+
+    <div class="tileColumn">
+      <div id="o10" class="tile"></div>
+      <div id="o11" class="tile"></div>
+      <div id="o12" class="tile"></div>
+      <div id="o13" class="tile"></div>
+      <div id="o14" class="tile"></div>
+      <div id="o15" class="tile"></div>
+      <div id="o16" class="tile"></div>
+      <div id="o17" class="tile"></div>
+      <div id="o18" class="tile"></div>
+      <div id="o19" class="tile"></div>
+    </div>
+
+    <div class="tileColumn">
+      <div id="o20" class="tile"></div>
+      <div id="o21" class="tile"></div>
+      <div id="o22" class="tile"></div>
+      <div id="o23" class="tile"></div>
+      <div id="o24" class="tile"></div>
+      <div id="o25" class="tile"></div>
+      <div id="o26" class="tile"></div>
+      <div id="o27" class="tile"></div>
+      <div id="o28" class="tile"></div>
+      <div id="o29" class="tile"></div>
+    </div>
+
+    <div class="tileColumn">
+      <div id="o30" class="tile"></div>
+      <div id="o31" class="tile"></div>
+      <div id="o32" class="tile"></div>
+      <div id="o33" class="tile"></div>
+      <div id="o34" class="tile"></div>
+      <div id="o35" class="tile"></div>
+      <div id="o36" class="tile"></div>
+      <div id="o37" class="tile"></div>
+      <div id="o38" class="tile"></div>
+      <div id="o39" class="tile"></div>
+    </div>
+
+    <div class="tileColumn">
+      <div id="o40" class="tile"></div>
+      <div id="o41" class="tile"></div>
+      <div id="o42" class="tile"></div>
+      <div id="o43" class="tile"></div>
+      <div id="o44" class="tile"></div>
+      <div id="o45" class="tile"></div>
+      <div id="o46" class="tile"></div>
+      <div id="o47" class="tile"></div>
+      <div id="o48" class="tile"></div>
+      <div id="o49" class="tile"></div>
+    </div>
+
+    <div class="tileColumn">
+      <div id="o50" class="tile"></div>
+      <div id="o51" class="tile"></div>
+      <div id="o52" class="tile"></div>
+      <div id="o53" class="tile"></div>
+      <div id="o54" class="tile"></div>
+      <div id="o55" class="tile"></div>
+      <div id="o56" class="tile"></div>
+      <div id="o57" class="tile"></div>
+      <div id="o58" class="tile"></div>
+      <div id="o59" class="tile"></div>
+    </div>
+
+    <div class="tileColumn">
+      <div id="o60" class="tile"></div>
+      <div id="o61" class="tile"></div>
+      <div id="o62" class="tile"></div>
+      <div id="o63" class="tile"></div>
+      <div id="o64" class="tile"></div>
+      <div id="o65" class="tile"></div>
+      <div id="o66" class="tile"></div>
+      <div id="o67" class="tile"></div>
+      <div id="o68" class="tile"></div>
+      <div id="o69" class="tile"></div>
+    </div>
+
+    <div class="tileColumn">
+      <div id="o70" class="tile"></div>
+      <div id="o71" class="tile"></div>
+      <div id="o72" class="tile"></div>
+      <div id="o73" class="tile"></div>
+      <div id="o74" class="tile"></div>
+      <div id="o75" class="tile"></div>
+      <div id="o76" class="tile"></div>
+      <div id="o77" class="tile"></div>
+      <div id="o78" class="tile"></div>
+      <div id="o79" class="tile"></div>
+    </div>
+
+    <div class="tileColumn">
+      <div id="o80" class="tile"></div>
+      <div id="o81" class="tile"></div>
+      <div id="o82" class="tile"></div>
+      <div id="o83" class="tile"></div>
+      <div id="o84" class="tile"></div>
+      <div id="o85" class="tile"></div>
+      <div id="o86" class="tile"></div>
+      <div id="o87" class="tile"></div>
+      <div id="o88" class="tile"></div>
+      <div id="o89" class="tile"></div>
+    </div>
+
+    <div class="tileColumn">
+      <div id="o90" class="tile"></div>
+      <div id="o91" class="tile"></div>
+      <div id="o92" class="tile"></div>
+      <div id="o93" class="tile"></div>
+      <div id="o94" class="tile"></div>
+      <div id="o95" class="tile"></div>
+      <div id="o96" class="tile"></div>
+      <div id="o97" class="tile"></div>
+      <div id="o98" class="tile"></div>
+      <div id="o99" class="tile"></div>
+    </div>
+
+
+
+</div>
+<div class="playerHeader" id="header2"><span>Player 2:&ensp;</span><span id="opponentName">waiting for opponent</span></div>
+</div>
+  </div>
+  </body>
+</html>
