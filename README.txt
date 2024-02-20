@@ -2,8 +2,8 @@ CS193X Final Project
 ====================
 
 Project Title: Battleship!
-Your Name: Logan Schreier
-Your SUNetID: logansch
+Your Name:
+Your SUNetID:
 
 Overview
 --------
